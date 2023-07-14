@@ -26,8 +26,8 @@ volScalarField DT
         IOobject::MUST_READ,
         IOobject::NO_WRITE
     ),
-    mesh,
-    dimensionedScalar(dimViscosity, Zero)
+    mesh
+    // dimensionedScalar(dimViscosity, Zero)
 );
 
 if (!DT.headerOk())
