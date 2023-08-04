@@ -82,6 +82,8 @@ int main(int argc, char *argv[])
 
     Info<< "\nCalculating temperature distribution\n" << endl;
 
+    #include "outputInitial.H"
+
     while (simple.loop())
     {
         Info<< "Time = " << runTime.timeName() << nl << endl;
@@ -103,6 +105,7 @@ int main(int argc, char *argv[])
         #include "write.H"
 
         runTime.printExecutionTime(Info);
+        #include "output.H"
     }
 
     Info<< "End\n" << endl;
